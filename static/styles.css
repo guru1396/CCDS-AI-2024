@@ -1,0 +1,381 @@
+body, head{
+    background-color: #FFFFF0;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1em;
+    margin-top: 15px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Impact, "Comic Sans MS", fantasy;
+    letter-spacing: 1px;
+    font-size: 2em;
+    color: #ff7d03;
+    margin-bottom: 15px;
+    padding: 0.4em 0.5em;
+    background-color: #247aa1;
+    border-radius: 5em;
+}
+
+.logo #elder{
+    color: #eee;
+    border-bottom: none;
+}
+.logo img{
+    width: 1.5em;
+    border-bottom: none;
+    
+}
+
+.coins, .trophies{
+    background: #ffe657;
+    width: max-content;
+    height: max-content;
+    font-size: 1.6em;
+    padding: 0.4em;
+    padding-left: none;
+    color: #F5F5F5;
+    -webkit-text-stroke: 1px #999;
+    font-family: Impact, "Comic Sans MS", fantasy;
+    letter-spacing: 4px;
+    border-radius: 0.3em;
+    border: 3px solid #999;
+}
+
+.trophies-coins-container{
+    display: flex;
+    align-items: center;
+    padding: none;
+    position: relative;
+    left: 0.3em;
+}
+
+.trophies{
+    position: relative;
+    left: 0.8em;
+    z-index: -1;
+    padding-right: 1em;
+    background-color: #C0C0C0;
+    color: #F5F5F5;
+    -webkit-text-stroke: 1px #999;
+    border: 3px solid #999;
+}
+/* Difficulty Cards */
+.exercise-type{
+    width: 100%;
+    height: 50vh;
+    min-height: max-content;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.exercise{
+    min-height: max-content;
+    width: 25%;
+    min-width: 350px;
+    background-color: #333;
+    border-radius: 25px;
+    padding: 15px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Impact, "Comic Sans MS", fantasy;
+    letter-spacing: 2px;
+    font-size: 2.2em ;
+}
+
+.exercise#beginner{
+    background-color: #A8D5BA;
+    color: #2F4F4F;
+    opacity: 0;
+    animation: fadeInFromBelow 0.5s ease-out forwards;
+}
+
+.exercise#intermediate{
+    background-color: #FFD966;
+    color: #8B6A00;
+    opacity: 0;
+    animation: fadeInFromBelow 0.5s ease-out forwards 0.5s;
+}
+
+.exercise#advanced{
+    background-color: #FF8C42;
+    color: #7C3E1F;
+    opacity: 0;
+    animation: fadeInFromBelow 0.5s ease-out forwards 1s;
+}
+
+.exercise img{
+    width: 100%;
+    border-radius: 25px;
+}
+
+.exercise#beginner:hover{
+    background-color: #2F4F4F;
+    color: #A8D5BA;
+}
+.exercise#intermediate:hover{
+    background-color: #8B6A00;
+    color: #FFD966;
+}
+.exercise#advanced:hover{
+    background-color: #7C3E1F;
+    color: #FF8C42;
+}
+
+@keyframes fadeInFromBelow{
+    0%{
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    70%{
+        opacity: 1;
+        transform: translateY(-25px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer{
+    position: fixed;
+    bottom:-35px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 15px;
+    gap: 2vw;
+}
+
+footer img{
+    height: 8vh;
+    min-height: 70px;
+}
+
+footer div{
+    background-color: #21897E;
+    padding: 15px;
+    padding-bottom: 50px;
+    height: max-content;
+    width: max-content;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+footer div:hover{
+    transform: translateY(-10px);
+}
+
+/* Gift Store CSS */
+
+.gift-store-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.5em;
+    background-color: #333;
+    color: #F5F5F5;
+    font-family: Impact, "Comic Sans MS", fantasy;
+    letter-spacing: 2px;
+    font-size: 2.5em;
+    border-radius: 25px;
+    margin-top: 25px;
+    width: 90%;
+    margin: auto;
+}
+.gift-card-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1em;
+}
+
+.gift-card{
+    height: 50vh;
+    min-height: max-content;
+    background: #e6e1cb;
+    width: 25%;
+    min-width: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    color: #222;
+    text-align: center;
+    padding: 1.3em 0.7em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-top: 25px;
+}
+.gift-card:hover{
+    transform: scale(1.05);
+}
+
+.gift-card:active{
+    transform: scale(0.95);
+    background-color: #cac6b1;
+}
+.gift-card img{
+    width: 80%;
+    max-width: 300px;
+    border-radius: 25px;
+    border: 0.2em solid #892d21;
+    margin: 0px;
+}
+
+@media (min-width: 1500px) {
+    .gift-card{
+        width: 700px;
+        gap: 1.3em;
+        align-items: center;
+        flex-wrap: nowrap;
+        height: max-content;
+        text-align: left;
+    }
+
+    .gift-card img{
+        width: 225px;
+    }
+}
+
+
+
+.gift-title{
+    color: #F5F5F5;
+    font-size: 2.5em;
+    font-family: Impact, "Comic Sans MS", fantasy;
+    letter-spacing: 3px;
+    padding: 0.2em;
+    margin: 0px;
+    color: black;
+    text-decoration: solid;
+    margin: auto;
+}
+
+.gift-desc{
+    font-size: 1.5em;
+    font-family: sans-serif, Arial, Calibri;
+    letter-spacing: 1px;
+    margin: 0px;
+}
+
+.gift-text-container{
+    display: block;
+    align-items: start;
+}
+
+.gift-text-container .cost{
+    font-size: 1.8em;
+    font-family: Impact, "Comic Sans MS", fantasy;
+    letter-spacing: 1px;
+    padding: 0.4em;
+    margin: 0px;
+    background-color: #333;
+    width: max-content;
+    margin-right: 0px;
+    margin-left: auto;
+    margin-top: 0.2em;
+    border-radius: 0.3em;
+    color: #ccc;
+}
+
+.gift-text-container .cost #amt{
+    color: gold;    
+}
+
+.workout{
+    width: 90%;
+    min-height: 70%;
+    max-height: 70%;
+    background-color: #eee;
+    margin: auto;
+    padding: 1em;
+    padding-top: 0px;
+    position: absolute;
+    right: 2.5%;
+    left: 2.5%;
+    border-radius: 25px;
+    overflow-y: auto;
+}
+
+.workout header{
+    width: 100%;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3em;
+    padding-top: 15px;
+    padding-bottom: 2px;
+    border-bottom: 4px solid #777;
+    color: #555;
+}
+
+.workout header #beginner{
+    color: rgb(46, 104, 104);
+}
+.workout .video-container {
+    display: flex;
+    padding: auto 1em;
+    justify-content: space-between;
+    background-color: #A8D5BA;
+    border-radius: 25px;
+    margin: 15px 0px;
+}
+
+.workout .video-container .video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    padding-left: 1em;
+}
+.workout .video-container .video img{
+    height: 4em;
+    border-radius: 5px;
+}
+
+.workout .video-container .video p{
+    font-family: sans-serif, Arial, Calibri;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #2F4F4F;
+
+}
+
+.workout .benefits{
+    display: flex;
+    align-items: center;
+    padding-right: 1em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    gap: 25px;
+}
+
+.workout .benefits p#coins{
+    color: #a17e15;
+    -webkit-text-stroke: 1px #ccc999;
+}
+.workout .benefits p#trophies{
+    color: #eee;
+    -webkit-text-stroke: 1px #777771;
+}
